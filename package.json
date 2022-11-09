@@ -6,8 +6,9 @@
 		"dev": "ts-node src/index.ts",
 		"pretty": "prettier src --write",
 		"linty": "eslint src --fix",
-		"ts": "tsc",
-		"clean": "npm run pretty && npm run linty && npm run ts"
+		"clean": "npm run pretty && npm run linty",
+		"build": "npm run clean && tsc",
+		"start": "npm run build && node dist/src/index.js"
 	},
 	"dependencies": {
 		"@prisma/client": "4.6.0",
